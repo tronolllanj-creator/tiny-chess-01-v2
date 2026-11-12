@@ -1,5 +1,5 @@
 # tiny-chess-01
 
-A compact deterministic Python chess engine for make.fun. It uses a 0x88 board; alpha-beta search with a transposition table, killer moves, and a history heuristic; quiescence; and search-time repetition detection.
+A compact deterministic chess engine using a 0x88 board and alpha-beta search. Its transposition table, killer moves, history heuristic, and quiescence search guide 30,000 fixed nodes per move.
 
-The engine uses a fixed 30,000-node budget per move and an environment HTTP driver. Legal move generation covers promotions, castling, and en passant; terminal search recognizes checkmate and stalemate. `main.py` is an LZMA-compressed engine payload with its standard-library unpacker.
+The engine detects repetition during search and supports checkmate, castling, and en passant. It uses the competition environment HTTP driver. main.py is an LZMA payload with its minimal unpacker.
